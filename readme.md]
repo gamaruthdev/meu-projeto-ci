@@ -1,0 +1,1 @@
+É possível comprovar que os jobs testes-unitarios e scan-de-seguranca rodaram em paralelo pois, durante a execução do pipeline, os logs aparecem de forma intercalada no terminal. Além disso, cada job é executado em um container separado, identificado pelo nome do job entre colchetes, como [testes-unitarios] e [scan-de-seguranca], demonstrando execução simultânea.
