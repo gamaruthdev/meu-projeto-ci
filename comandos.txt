@@ -1,0 +1,50 @@
+  103  act -l
+  104  ls
+  105  mkdir .github/workflows/
+  106  cd .github/workflows/
+  107  pwd
+  108  touch 01-hello-local.yml
+  109  nano 01-hello-local.yml
+  110  act -l
+  111  cd ~/meu-projeto-ci
+  112  pwd
+  113  act -l
+  114  act -W .github/workflows/01-hello-local.yml | grep "Iniciando\|Finalizado\|v"
+  115  act -W .github/workflows/01-hello-local.yml -P ubuntu-latest=node:slim | grep -E "Iniciando|Finalizado|v"
+  116  reset
+  117  pwd
+  118  ls
+  119  cd ~/meu-projeto-ci
+  120  pwd
+  121  ls .github/workflows
+  122  act -W .github/workflows/01-hello-local.yml -P ubuntu-latest=node:slim --container-architecture linux/amd64
+  123  sudo act -W .github/workflows/01-hello-local.yml -P ubuntu-latest=node:slim
+  124  touch .github/workflows/02-pipeline-principal.yml
+  125  nano .github/workflows/02-pipeline-principal.yml
+  126  sudo act -n
+  127  sudo act -n -P ubuntu-latest=node:slim
+  128  sudo act -l
+  129  Stage 0  setup-e-lint
+  130  Stage 1  testes-unitarios
+  131  Stage 1  scan-de-seguranca
+  132  Stage 2  build-e-deploy
+  133  sudo act -W .github/workflows/02-pipeline-principal.yml -P ubuntu-latest=node:slim
+  134  ls
+  135  nano README.md
+  136  ls
+  137  nano readme.md]
+  138  git add .
+  139  git commit - m "Entrega final"
+  140  git commit - m "Entrega final"
+  141  git commit -m "Entrega final"
+  142  mv readme.md] README.md
+  143  git add .
+  144  git commit -m "Corrigindo nome do README"
+  145  git push
+  146  git remote add origin https://github.com/gamaruthdev/meu-projeto-ci.git
+  147  git push -u origin main
+  148  git push -u origin main
+  149  git remote add origin https://github.com/gamaruthdev/meu-projeto-ci.git
+  150  git add .
+  151  git commit -m "subindo para o repo"
+  152  history 50 > comandos.txt
